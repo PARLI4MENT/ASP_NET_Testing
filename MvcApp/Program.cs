@@ -1,20 +1,13 @@
-using System;
-
-namespace std
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddControllers();
+    var builder = WebApplication.CreateBuilder(args);
 
-            var app = builder.Build();
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+    // Add MVC Services
+    builder.Services.AddControllersWithViews();
 
-            app.Run();
-        }
-    }
+    var app = builder.Build();
+    app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    app.Run();
 }
