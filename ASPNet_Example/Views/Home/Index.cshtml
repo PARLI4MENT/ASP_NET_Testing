@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Это заглушка на основе ASP.Net Core (.Net 8)</h1>
+    <br /> <br /> <br />
+    <div>
+        <h5>
+            Так-как я впервые создаю свое <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.Net Core приложение</a> и впринципе почти никогда не имел дела с "вэбом", то именно тут я и буду эксперементировать:)
+        </h5>
+    </div>
+    <br /> <br /> <br />
+    <p>На данном домене буду публиковать\обновлять свое <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.Net Core приложение</a></p>
+    <p>#1 Cобранное приложение физически находится на домашнем сервере <a href="https://www.proxmox.com/en/">Proxmox</a> (Виртуальная машина <a href="https://www.microsoft.com/ru-ru/evalcenter/evaluate-windows-server-2022">Window Server 2022</a>)</p>
+    <p>#2 Так как мой провайдер не предоставляет статичный IP-адрес, пришлось прибегнуть к <a href="https://www.youtube.com/watch?v=Bn5tCog8rm0">"костылям"</a>, а именно:</p>
+    <p>#2.2 Купил доменное имя <a href="https://parli4ment.ru/">PARLI4MENT.ru</a> (на <a href="https://www.reg.ru">https://www.reg.ru</a>)</p>
+    <p>#2.2 Арендовал <a href="https://ruvds.com/">VPS</a> с белым адресом.</p>
+    <p>#2.3 Поднял <a href="https://www.centos.org/stream9/">CentOS 9</a> и "накатил" <a href="https://mikrotik.com/download">CHR (Cloud Hosted Router от Mikrotik)</a></p>
+    <p>#2.4 Настроил CHR через <a href="https://mikrotik.com/download">Winbox</a>, поднял <a href="https://www.wireguard.com/">VPN Wireguard</a> до домашнего сервера, чтобо можно было ссылаться на адрес за NAT`ом</p>
+    <p>
+        #3 По итогу, VPS сервер проксирует 4 порта: <a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">21(FTP)</a>, <a href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol">22(SFTP)</a>,
+        <a href="https://en.wikipedia.org/wiki/HTTP">80(HTTP)</a>, <a href="https://ru.wikipedia.org/wiki/HTTPS">443(HTTPS)</a>
+    </p>
+    <p>
+        #4 Так же на виртуалке уже "подняты" два SQL сервера (<u>хоть пока и не используются</u>):
+        <br />1) На <a href="https://releases.ubuntu.com/jammy/">Ubuntu 22.04</a> (<a href="https://www.microsoft.com/ru-ru/sql-server/sql-server-2022">MSSQL Server 2022</a>) => <a href="https://learn.microsoft.com/ru-ru/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16&tabs=ubuntu2004">ссылка</a>
+        <br />2) На <a href="https://www.debian.org/download">Debian 12</a> (<a href="https://www.postgresql.org/about/news/postgresql-17-released-2936/">PostgreSQL 17</a>) => <a href="https://www.postgresql.org/download/linux/debian/">ссылка</a>
+    </p>
+</div>
